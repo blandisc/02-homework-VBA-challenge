@@ -101,7 +101,7 @@ End If
     Next C
         Next R
         
-minPercent = WorksheetFunction.Min(Range(["K2:K1000000"]))
+minPercent = WorksheetFunction.Min(Range(["K2:K20000"]))
 
 For R = 2 To rowdelimitier
 
@@ -124,16 +124,16 @@ End If
     Next R
     
                 
-Range(["O2"]).Value = tickerMax
-Range(["P2"]).Value = maxPercent
-Range(["P2"]).NumberFormat = "0.00%"
+ws.Range(["O2"]).Value = tickerMax
+ws.Range(["P2"]).Value = maxPercent
+ws.Range(["P2"]).NumberFormat = "0.00%"
 
-Range(["O3"]).Value = tickerMin
-Range(["P3"]).Value = minPercent
-Range(["P3"]).NumberFormat = "0.00%"
+ws.Range(["O3"]).Value = tickerMin
+ws.Range(["P3"]).Value = minPercent
+ws.Range(["P3"]).NumberFormat = "0.00%"
 
-Range(["O4"]).Value = tickerVol
-Range(["P4"]).Value = maxVolume
+ws.Range(["O4"]).Value = tickerVol
+ws.Range(["P4"]).Value = maxVolume
 
 Next ws
 
