@@ -39,11 +39,11 @@ ws.Cells(R, C).Select
 
 'Send Message
 
-'If ws.Cells(R + 1, C).Value <> ws.Cells(R, C).Value Then
+If ws.Cells(R + 1, C).Value <> ws.Cells(R, C).Value Then
 
-'MsgBox (ws.Cells(R, C).Value)
+MsgBox (ws.Cells(R, C).Value)
 
-'End If
+End If
 
 'Sum and print volume
 
