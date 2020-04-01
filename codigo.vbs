@@ -102,23 +102,23 @@ End If
         Next R
         
 minPercent = WorksheetFunction.Min(Range(["K2:K20000"]))
+maxPercent = WorksheetFunction.Max(Range(["K2:K20000"]))
+maxVolume = WorksheetFunction.Max(Range(["L2:L20000"]))
 
 For R = 2 To rowdelimitier
 
 
-    If ws.Cells(R + 1, 11).Value > Cells(R, 11) Then
-    maxPercent = ws.Cells(R + 1, 11).Value
-    tickerMax = ws.Cells(R + 1, 9).Value
-    End If
+    If ws.Cells(R, 11).Value = maxPercent Then
+    tickerMax = ws.Cells(R, 9).Value
+End If
     
 If ws.Cells(R, 11).Value = minPercent Then
     tickerMin = ws.Cells(R, 9).Value
 End If
                 
             
-If ws.Cells(R + 1, 12).Value > Cells(R, 12) Then
-    maxVolume = ws.Cells(R + 1, 12).Value
-    tickerVol = ws.Cells(R + 1, 9).Value
+If ws.Cells(R, 12).Value = maxVolume Then
+    tickerVol = ws.Cells(R, 9).Value
 End If
                 
     Next R
